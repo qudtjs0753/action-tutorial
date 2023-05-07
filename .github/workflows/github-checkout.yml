@@ -1,0 +1,17 @@
+name: github checkout
+
+on: [push]
+
+jobs: #workflow 정의
+  build: #job
+    runs-on: ubuntu-latest #돌릴 환경(runner setting)
+    
+    steps: #job 내부의 step들
+    # 처음부터 끝까지 action 작성하기 힘드니, 다른사람이 만든 action을 실행하려고 할 때 이 uses를 사용
+    # 현재 actions/checkout이라는 주소를 github.com 뒤에 넣고 검색하면 저장소 나옴.
+    - uses: actions/checkout@v2 
+    - name: Run pwd
+      run: pwd
+    - name: Run ls -al
+      run: ls -al
+  
