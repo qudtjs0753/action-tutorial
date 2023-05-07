@@ -11,5 +11,5 @@ jobs: #workflow 정의
     - name: Run pwd
       run: pwd
     - name: Run ls -al
-      run: la -al
+      run: ls -al
   
